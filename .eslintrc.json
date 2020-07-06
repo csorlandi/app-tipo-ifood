@@ -40,5 +40,12 @@
     ],
     "import/prefer-default-export": "off",
     "react/jsx-one-expression-per-line": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-plugin-root-import": {
+        "rootPathSuffix": "src"
+      }
+    }
   }
 }
