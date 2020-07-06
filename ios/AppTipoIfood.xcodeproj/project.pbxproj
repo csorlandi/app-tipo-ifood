@@ -20,6 +20,9 @@
 		2DCD954D1E0B4F2C00145EB5 /* AppTipoIfoodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AppTipoIfoodTests.m */; };
 		35F2E178C5C670E9501785F0 /* libPods-AppTipoIfood.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D93D603585DC8D74253A6D22 /* libPods-AppTipoIfood.a */; };
 		516F166BEDDA514ACAABF3E2 /* libPods-AppTipoIfood-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7FBF4D383AA7D213CA629A /* libPods-AppTipoIfood-tvOS.a */; };
+		3D3783891D7A40A482C93F6C /* JosefinSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 548093D0F8194F80B28D7EFC /* JosefinSans-Bold.ttf */; };
+		AC5354E83B59430186726F6C /* JosefinSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA1515BADB2344E0A0D00791 /* JosefinSans-Regular.ttf */; };
+		6C81CF2232F44068AFAB3EA9 /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92E2D249E7F442A3A701F558 /* JosefinSans-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		EBF7BAF45D676BC38CFBB17F /* Pods-AppTipoIfood-AppTipoIfoodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTipoIfood-AppTipoIfoodTests.release.xcconfig"; path = "Target Support Files/Pods-AppTipoIfood-AppTipoIfoodTests/Pods-AppTipoIfood-AppTipoIfoodTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		548093D0F8194F80B28D7EFC /* JosefinSans-Bold.ttf */ = {isa = PBXFileReference; name = "JosefinSans-Bold.ttf"; path = "../assets/fonts/JosefinSans-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EA1515BADB2344E0A0D00791 /* JosefinSans-Regular.ttf */ = {isa = PBXFileReference; name = "JosefinSans-Regular.ttf"; path = "../assets/fonts/JosefinSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		92E2D249E7F442A3A701F558 /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; name = "JosefinSans-SemiBold.ttf"; path = "../assets/fonts/JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +187,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				0617565B83438BBDBEAD39BD /* Pods */,
+				713474FF2A144B07AB848DFF /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -197,6 +204,17 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		713474FF2A144B07AB848DFF /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				548093D0F8194F80B28D7EFC /* JosefinSans-Bold.ttf */,
+				EA1515BADB2344E0A0D00791 /* JosefinSans-Regular.ttf */,
+				92E2D249E7F442A3A701F558 /* JosefinSans-SemiBold.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -340,6 +358,9 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				3D3783891D7A40A482C93F6C /* JosefinSans-Bold.ttf in Resources */,
+				AC5354E83B59430186726F6C /* JosefinSans-Regular.ttf in Resources */,
+				6C81CF2232F44068AFAB3EA9 /* JosefinSans-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
