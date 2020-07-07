@@ -1,11 +1,15 @@
 import React from 'react';
 
+import { useNavigation } from '@react-navigation/native';
+
 import * as S from './styles';
 
 import cardImage from '~/assets/images/trending-restaurants-1.jpg';
 import userImage from '~/assets/images/user.png';
 
-const Splash = () => {
+export default function Home() {
+  const navigation = useNavigation();
+
   return (
     <S.SafeAreaContainer>
       <S.FindInputContainer>
@@ -58,7 +62,7 @@ const Splash = () => {
       </S.TrendingListContainer>
       <S.TitleContainer>
         <S.Title>Category</S.Title>
-        <S.SubTitleButton>
+        <S.SubTitleButton onPress={() => navigation.navigate('categories')}>
           <S.SubTitle>See all (9)</S.SubTitle>
         </S.SubTitleButton>
       </S.TitleContainer>
@@ -104,6 +108,4 @@ const Splash = () => {
       </S.UsersContainer>
     </S.SafeAreaContainer>
   );
-};
-
-export default Splash;
+}

@@ -72,6 +72,7 @@ export const TrendingListContainer = styled.View``;
 
 export const TrendingList = styled.ScrollView.attrs({
   horizontal: true,
+  showsHorizontalScrollIndicator: false,
 })`
   margin-top: 24px;
 `;
