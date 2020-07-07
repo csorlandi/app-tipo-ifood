@@ -17,7 +17,9 @@ export default function Home() {
           <S.FindInputIcon name="search" />
         </S.FindInputButtonContainer>
         <S.FindInput placeholder="Find Restaurants" />
-        <S.FindInputButtonContainer>
+        <S.FindInputButtonContainer
+          onPress={() => navigation.navigate('filter')}
+        >
           <S.FindInputIcon name="sliders" />
         </S.FindInputButtonContainer>
       </S.FindInputContainer>

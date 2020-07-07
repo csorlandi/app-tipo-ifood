@@ -8,6 +8,7 @@ import Icon from 'react-native-vector-icons/Feather';
 import Splash from '~/pages/Splash';
 import Home from '~/pages/Home';
 import Categories from '~/pages/Categories';
+import Filter from '~/pages/Filter';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -86,7 +87,7 @@ export default function Routes() {
         component={Categories}
         options={{
           headerLeft: props => (
-            <Icon name="chevron-left" size={32} {...props} />
+            <Icon name="chevron-left" size={28} {...props} />
           ),
           headerRight: props => <Icon name="search" size={24} {...props} />,
           headerTitleAlign: 'center',
@@ -108,6 +109,33 @@ export default function Routes() {
             paddingRight: 16,
           },
           headerRightContainerStyle: {
+            paddingLeft: 16,
+            paddingRight: 16,
+          },
+        }}
+      />
+      <Stack.Screen
+        name="filter"
+        component={Filter}
+        options={{
+          headerLeft: props => (
+            <Icon name="chevron-left" size={32} {...props} />
+          ),
+          headerTitleAlign: 'center',
+          headerTitle: 'Filter',
+          headerTitleStyle: {
+            color: '#222455',
+            fontFamily: 'JosefinSans-SemiBold',
+            fontSize: 24,
+          },
+          headerStyle: {
+            backgroundColor: '#fff',
+            elevation: 0,
+            borderWidth: 0,
+            shadowColor: 'transparent',
+          },
+          headerBackTitleVisible: false,
+          headerLeftContainerStyle: {
             paddingLeft: 16,
             paddingRight: 16,
           },
