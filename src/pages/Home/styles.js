@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
-import { Dimensions } from 'react-native';
+import { Dimensions, StyleSheet, Platform } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Feather';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import LinearGradient from 'react-native-linear-gradient';
 
+Icon.loadFont();
 FontAwesome.loadFont();
 
 const { width } = Dimensions.get('window');
@@ -15,17 +16,30 @@ export const SafeAreaContainer = styled.SafeAreaView`
   background-color: #ffffff;
 `;
 
+export const ContainerScroll = styled.ScrollView.attrs({
+  showsVerticalScrollIndicator: true,
+  showsHorizontalScrollIndicator: true,
+  directionalLockEnabled: true,
+})``;
+
 export const FindInputContainer = styled.View`
   margin: 0 24px;
+  margin-top: ${Platform.select({
+    android: 24,
+    ios: 0,
+  })}px;
   background-color: #fff;
   border-radius: 8px;
   flex-direction: row;
   height: 48px;
   border-width: 1px;
   border-color: #e8e8e8;
+  margin-bottom: 12px;
 `;
 
-export const FindInputButtonContainer = styled.TouchableOpacity`
+export const FindInputButtonContainer = styled.TouchableOpacity.attrs({
+  activeOpacity: 0.6,
+})`
   padding: 0 16px;
   align-self: stretch;
   justify-content: center;
@@ -49,7 +63,7 @@ export const FindInput = styled.TextInput.attrs({
 export const TitleContainer = styled.View`
   flex-direction: row;
   margin: 0 24px;
-  margin-top: 32px;
+  margin-top: 24px;
   align-items: flex-end;
 `;
 
@@ -60,7 +74,9 @@ export const Title = styled.Text`
   color: #222455;
 `;
 
-export const SubTitleButton = styled.TouchableOpacity``;
+export const SubTitleButton = styled.TouchableOpacity.attrs({
+  activeOpacity: 0.6,
+})``;
 
 export const SubTitle = styled.Text`
   font-family: 'JosefinSans-Regular';
@@ -73,18 +89,22 @@ export const TrendingListContainer = styled.View``;
 export const TrendingList = styled.ScrollView.attrs({
   horizontal: true,
   showsHorizontalScrollIndicator: false,
-})`
-  margin-top: 24px;
-`;
+})``;
 
-export const TrendingCardContainer = styled.View`
-  margin-left: 32px;
-  width: ${width * 0.8}px;
+export const TrendingCardContainer = styled.TouchableOpacity.attrs({
+  activeOpacity: 0.6,
+})`
+  margin: 24px 0;
+  margin-left: 24px;
+  margin-right: ${({ last }) => (last ? 24 : 0)}px;
+  width: ${width * 0.75}px;
   border-radius: 8px;
   background-color: #fff;
   align-self: flex-start;
-  border-width: 1px;
-  border-color: #e8e8e8;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  elevation: 3;
+  border-width: ${StyleSheet.hairlineWidth}px;
+  border-color: 'rgba(0, 0, 0, 0.01)';
 `;
 
 export const TrendingCardImage = styled.ImageBackground.attrs({
@@ -100,7 +120,9 @@ export const TrendingCardImage = styled.ImageBackground.attrs({
   justify-content: space-between;
 `;
 
-export const TagContainer = styled.View`
+export const TagContainer = styled.TouchableOpacity.attrs({
+  activeOpacity: 0.75,
+})`
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -176,14 +198,21 @@ export const CategoriesContainer = styled.View`
   justify-content: space-between;
 `;
 
+export const CategoryContainer = styled.TouchableOpacity.attrs({
+  activeOpacity: 0.6,
+})`
+  width: ${(width - 72) / 3}px;
+  height: ${(width - 72) / 3}px;
+  border-radius: 8px;
+`;
+
 export const CategoryBackground = styled.ImageBackground.attrs({
   resizeMode: 'cover',
   imageStyle: {
     borderRadius: 8,
   },
 })`
-  width: ${(width - 60) / 3}px;
-  height: ${(width - 60) / 3}px;
+  flex: 1;
   border-radius: 8px;
 `;
 
@@ -206,10 +235,13 @@ export const CategoryText = styled.Text`
 
 export const UsersContainer = styled.View`
   flex-direction: row;
-  margin: 0 24px;
-  margin-top: 24px;
+  margin: 24px;
   justify-content: space-between;
 `;
+
+export const UserContainer = styled.TouchableOpacity.attrs({
+  activeOpacity: 0.6,
+})``;
 
 export const User = styled.Image.attrs({
   resizeMode: 'cover',

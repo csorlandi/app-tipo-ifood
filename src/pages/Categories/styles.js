@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
-import { Dimensions } from 'react-native';
-
 import LinearGradient from 'react-native-linear-gradient';
-
-const { height } = Dimensions.get('window');
 
 export const Container = styled.SafeAreaView`
   flex: 1;
@@ -17,7 +13,9 @@ export const CategoriesList = styled.ScrollView.attrs({
   padding: 0 24px;
 `;
 
-export const CategoryContainer = styled.TouchableOpacity`
+export const CategoryContainer = styled.TouchableOpacity.attrs({
+  activeOpacity: 0.7,
+})`
   margin-top: 24px;
   border-radius: 8px;
 `;

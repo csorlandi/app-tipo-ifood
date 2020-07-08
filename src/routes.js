@@ -10,6 +10,11 @@ import Home from '~/pages/Home';
 import Categories from '~/pages/Categories';
 import Filter from '~/pages/Filter';
 
+import HeaderButton from '~/components/HeaderButton';
+import TabBarIcon from '~/components/TabBarIcon';
+
+Icon.loadFont();
+
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -19,7 +24,7 @@ function HomeTabs() {
       tabBarOptions={{
         showLabel: false,
         activeTintColor: '#5663FF',
-        inactiveTintColor: '#6E7FAA',
+        inactiveTintColor: 'rgba(110,127,170,0.5)',
       }}
       barStyle={{
         backgroundColor: '#fff',
@@ -29,35 +34,29 @@ function HomeTabs() {
         name="home"
         component={Home}
         options={{
-          tabBarIcon: ({ focused, color, size }) => (
-            <Icon name="home" size={size} color={color} />
-          ),
+          tabBarIcon: props => <TabBarIcon iconName="home" {...props} />,
         }}
       />
       <Tab.Screen
         name="bookmarks"
         component={Home}
         options={{
-          tabBarIcon: ({ focused, color, size }) => (
-            <Icon name="bookmark" size={size} color={color} />
-          ),
+          tabBarIcon: props => <TabBarIcon iconName="bookmark" {...props} />,
         }}
       />
       <Tab.Screen
         name="plus"
         component={Home}
         options={{
-          tabBarIcon: ({ focused, color, size }) => (
-            <Icon name="plus-circle" size={size} color={color} />
-          ),
+          tabBarIcon: props => <TabBarIcon iconName="add-circle" {...props} />,
         }}
       />
       <Tab.Screen
         name="notifications"
         component={Home}
         options={{
-          tabBarIcon: ({ focused, color, size }) => (
-            <Icon name="bell" size={size} color={color} />
+          tabBarIcon: props => (
+            <TabBarIcon iconName="notifications" {...props} />
           ),
         }}
       />
@@ -65,9 +64,7 @@ function HomeTabs() {
         name="profile"
         component={Home}
         options={{
-          tabBarIcon: ({ focused, color, size }) => (
-            <Icon name="user" size={size} color={color} />
-          ),
+          tabBarIcon: props => <TabBarIcon iconName="person" {...props} />,
         }}
       />
     </Tab.Navigator>
@@ -87,11 +84,13 @@ export default function Routes() {
         component={Categories}
         options={{
           headerLeft: props => (
-            <Icon name="chevron-left" size={28} {...props} />
+            <HeaderButton iconName="chevron-left" iconSize={28} {...props} />
           ),
-          headerRight: props => <Icon name="search" size={24} {...props} />,
+          headerRight: props => (
+            <HeaderButton iconName="search" iconSize={24} {...props} />
+          ),
           headerTitleAlign: 'center',
-          headerTitle: 'Category',
+          title: 'Category',
           headerTitleStyle: {
             color: '#222455',
             fontFamily: 'JosefinSans-SemiBold',
@@ -104,14 +103,6 @@ export default function Routes() {
             shadowColor: 'transparent',
           },
           headerBackTitleVisible: false,
-          headerLeftContainerStyle: {
-            paddingLeft: 16,
-            paddingRight: 16,
-          },
-          headerRightContainerStyle: {
-            paddingLeft: 16,
-            paddingRight: 16,
-          },
         }}
       />
       <Stack.Screen
@@ -119,7 +110,7 @@ export default function Routes() {
         component={Filter}
         options={{
           headerLeft: props => (
-            <Icon name="chevron-left" size={32} {...props} />
+            <HeaderButton iconName="chevron-left" iconSize={28} {...props} />
           ),
           headerTitleAlign: 'center',
           headerTitle: 'Filter',
@@ -135,10 +126,6 @@ export default function Routes() {
             shadowColor: 'transparent',
           },
           headerBackTitleVisible: false,
-          headerLeftContainerStyle: {
-            paddingLeft: 16,
-            paddingRight: 16,
-          },
         }}
       />
       <Stack.Screen name="splash" component={Splash} />
