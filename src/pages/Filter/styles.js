@@ -9,10 +9,16 @@ Icon.loadFont();
 
 const { width } = Dimensions.get('window');
 
-export const Container = styled.SafeAreaView`
+export const SafeAreaContainer = styled.SafeAreaView`
   flex: 1;
   background-color: #fff;
 `;
+
+export const ContainerScroll = styled.ScrollView.attrs({
+  showsVerticalScrollIndicator: true,
+  showsHorizontalScrollIndicator: true,
+  directionalLockEnabled: true,
+})``;
 
 export const Title = styled.Text`
   font-size: 20px;

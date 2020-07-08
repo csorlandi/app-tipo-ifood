@@ -12,18 +12,18 @@ export default function Home() {
 
   return (
     <S.SafeAreaContainer>
+      <S.FindInputContainer>
+        <S.FindInputButtonContainer>
+          <S.FindInputIcon name="search" />
+        </S.FindInputButtonContainer>
+        <S.FindInput placeholder="Find Restaurants" />
+        <S.FindInputButtonContainer
+          onPress={() => navigation.navigate('filter')}
+        >
+          <S.FindInputIcon name="sliders" />
+        </S.FindInputButtonContainer>
+      </S.FindInputContainer>
       <S.ContainerScroll>
-        <S.FindInputContainer>
-          <S.FindInputButtonContainer>
-            <S.FindInputIcon name="search" />
-          </S.FindInputButtonContainer>
-          <S.FindInput placeholder="Find Restaurants" />
-          <S.FindInputButtonContainer
-            onPress={() => navigation.navigate('filter')}
-          >
-            <S.FindInputIcon name="sliders" />
-          </S.FindInputButtonContainer>
-        </S.FindInputContainer>
         <S.TitleContainer>
           <S.Title>Trending Restaurants</S.Title>
           <S.SubTitleButton>
