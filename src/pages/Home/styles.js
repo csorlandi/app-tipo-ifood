@@ -17,8 +17,8 @@ export const SafeAreaContainer = styled.SafeAreaView`
 `;
 
 export const ContainerScroll = styled.ScrollView.attrs({
-  showsVerticalScrollIndicator: true,
-  showsHorizontalScrollIndicator: true,
+  showsVerticalScrollIndicator: false,
+  showsHorizontalScrollIndicator: false,
   directionalLockEnabled: true,
 })``;
 
