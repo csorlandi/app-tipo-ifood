@@ -9,6 +9,7 @@ import Splash from '~/pages/Splash';
 import Home from '~/pages/Home';
 import Categories from '~/pages/Categories';
 import Filter from '~/pages/Filter';
+import SignIn from '~/pages/SignIn';
 
 import HeaderButton from '~/components/HeaderButton';
 import TabBarIcon from '~/components/TabBarIcon';
@@ -77,6 +78,13 @@ export default function Routes() {
       <Stack.Screen
         name="splash"
         component={Splash}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="sign-in"
+        component={SignIn}
         options={{
           headerShown: false,
         }}
