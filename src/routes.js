@@ -75,6 +75,13 @@ export default function Routes() {
   return (
     <Stack.Navigator>
       <Stack.Screen
+        name="splash"
+        component={Splash}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
         name="home-tabs"
         component={HomeTabs}
         options={{ headerShown: false }}
@@ -128,7 +135,6 @@ export default function Routes() {
           headerBackTitleVisible: false,
         }}
       />
-      <Stack.Screen name="splash" component={Splash} />
     </Stack.Navigator>
   );
 }

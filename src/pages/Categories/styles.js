@@ -16,7 +16,7 @@ export const CategoriesList = styled.ScrollView.attrs({
 export const CategoryContainer = styled.TouchableOpacity.attrs({
   activeOpacity: 0.7,
 })`
-  margin-top: 24px;
+  margin-top: 12px;
   border-radius: 8px;
 `;
 
