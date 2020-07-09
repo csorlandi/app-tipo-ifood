@@ -19,7 +19,7 @@ export default function ForgotPassword() {
       <S.ContainerGradient>
         <S.FormContainer headerHeight={headerHeight}>
           <S.Description>
-            Enter your meail and will send you instructions on how to reset it
+            Enter your email and will send you instructions on how to reset it
           </S.Description>
           <S.InputContainer>
             <S.InputIcon name="mail" />

@@ -21,6 +21,7 @@ export const SafeAreaContainer = styled.SafeAreaView`
 
 export const TitleContainer = styled.View`
   flex: 1;
+  justify-content: center;
 `;
 
 export const Title = styled.Text`
@@ -28,7 +29,6 @@ export const Title = styled.Text`
   font-size: 41px;
   color: #ffffff;
   text-align: center;
-  margin-top: 114px;
 `;
 
 export const FormContainer = styled.View`
