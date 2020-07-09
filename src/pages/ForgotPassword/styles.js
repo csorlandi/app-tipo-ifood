@@ -15,24 +15,19 @@ export const ContainerGradient = styled(LinearGradient).attrs({
   flex: 1;
 `;
 
-export const SafeAreaContainer = styled.SafeAreaView`
-  flex: 1;
-`;
-
-export const TitleContainer = styled.View`
-  flex: 1;
-`;
-
-export const Title = styled.Text`
-  font-family: 'JosefinSans-Bold';
-  font-size: 41px;
-  color: #ffffff;
-  text-align: center;
-  margin-top: 114px;
-`;
-
 export const FormContainer = styled.View`
+  flex: 1;
   padding: 0 32px;
+  margin-top: ${({ headerHeight }) => headerHeight}px;
+`;
+
+export const Description = styled.Text`
+  font-family: 'JosefinSans-Light';
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 54px;
+  margin-top: 80px;
 `;
 
 export const InputContainer = styled.View`
@@ -64,48 +59,22 @@ export const Input = styled.TextInput.attrs({
   border-bottom-right-radius: 8px;
 `;
 
-export const ForgotButtonContainer = styled.TouchableOpacity.attrs({
-  activeOpacity: 0.6,
-})`
-  padding: 4px;
-  align-self: flex-end;
-`;
-
-export const ForgotButtonText = styled.Text`
-  font-family: 'JosefinSans-Regular';
-  font-size: 16px;
-  color: #fff;
-`;
-
-export const SignInButtonContainer = styled.TouchableOpacity.attrs({
+export const SendButtonContainer = styled.TouchableOpacity.attrs({
   activeOpacity: 0.7,
 })`
-  margin: 69px 0;
+  margin: 43px 32px;
   padding: 24px 0;
   align-items: center;
   border-radius: 8px;
   background-color: #5663ff;
 `;
 
-export const SignInButtonText = styled.Text`
-  font-family: 'JosefinSans-Regular';
-  font-size: 16px;
+export const SendButtonText = styled.Text`
+  font-family: 'JosefinSans-SemiBold';
+  font-size: 18px;
   color: #fff;
 `;
 
-export const SignUpContainer = styled.View`
-  align-items: center;
-  margin-bottom: 16px;
-`;
-
-export const SignUpButtonContainer = styled.TouchableOpacity`
-  padding: 4px 0;
-  border-bottom-width: ${StyleSheet.hairlineWidth}px;
-  border-bottom-color: #fff;
-`;
-
-export const SignUpButtonText = styled.Text`
-  font-family: 'JosefinSans-Light';
-  font-size: 16px;
-  color: #fff;
+export const SafeAreaContainer = styled.SafeAreaView`
+  flex: 0;
 `;

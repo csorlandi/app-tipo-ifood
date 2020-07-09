@@ -10,6 +10,7 @@ import Home from '~/pages/Home';
 import Categories from '~/pages/Categories';
 import Filter from '~/pages/Filter';
 import SignIn from '~/pages/SignIn';
+import ForgotPassword from '~/pages/ForgotPassword';
 
 import HeaderButton from '~/components/HeaderButton';
 import TabBarIcon from '~/components/TabBarIcon';
@@ -87,6 +88,34 @@ export default function Routes() {
         component={SignIn}
         options={{
           headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="forgot-password"
+        component={ForgotPassword}
+        options={{
+          headerLeft: props => (
+            <HeaderButton
+              iconName="chevron-left"
+              iconSize={28}
+              light
+              {...props}
+            />
+          ),
+          headerTransparent: true,
+          headerTitleAlign: 'center',
+          title: 'Forgot Password',
+          headerTitleStyle: {
+            color: '#fff',
+            fontFamily: 'JosefinSans-SemiBold',
+            fontSize: 24,
+          },
+          headerStyle: {
+            elevation: 0,
+            borderWidth: 0,
+            shadowColor: 'transparent',
+          },
+          headerBackTitleVisible: false,
         }}
       />
       <Stack.Screen

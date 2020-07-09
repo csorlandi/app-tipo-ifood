@@ -10,5 +10,5 @@ export const ButtonContainer = styled.TouchableOpacity.attrs({
 `;
 
 export const ButtonIcon = styled(Icon)`
-  color: #222455;
+  color: ${({ light }) => (light ? '#fff' : '#222455')};
 `;
