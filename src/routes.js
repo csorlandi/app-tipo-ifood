@@ -10,6 +10,7 @@ import Home from '~/pages/Home';
 import Categories from '~/pages/Categories';
 import Filter from '~/pages/Filter';
 import SignIn from '~/pages/SignIn';
+import SignUp from '~/pages/SignUp';
 import ForgotPassword from '~/pages/ForgotPassword';
 
 import HeaderButton from '~/components/HeaderButton';
@@ -86,6 +87,13 @@ export default function Routes() {
       <Stack.Screen
         name="sign-in"
         component={SignIn}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="sign-up"
+        component={SignUp}
         options={{
           headerShown: false,
         }}
