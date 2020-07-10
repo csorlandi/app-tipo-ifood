@@ -34,7 +34,7 @@ export default function SignIn() {
               <S.ForgotButtonText>Forgot Password?</S.ForgotButtonText>
             </S.ForgotButtonContainer>
             <S.SignInButtonContainer
-              onPress={() => navigation.navigate('home-tabs')}
+              onPress={() => navigation.navigate('set-location')}
             >
               <S.SignInButtonText>Login</S.SignInButtonText>
             </S.SignInButtonContainer>

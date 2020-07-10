@@ -12,6 +12,7 @@ import Filter from '~/pages/Filter';
 import SignIn from '~/pages/SignIn';
 import SignUp from '~/pages/SignUp';
 import ForgotPassword from '~/pages/ForgotPassword';
+import SetLocation from '~/pages/SetLocation';
 
 import HeaderButton from '~/components/HeaderButton';
 import TabBarIcon from '~/components/TabBarIcon';
@@ -124,6 +125,13 @@ export default function Routes() {
             shadowColor: 'transparent',
           },
           headerBackTitleVisible: false,
+        }}
+      />
+      <Stack.Screen
+        name="set-location"
+        component={SetLocation}
+        options={{
+          headerShown: false,
         }}
       />
       <Stack.Screen
